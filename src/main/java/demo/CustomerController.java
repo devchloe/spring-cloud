@@ -12,17 +12,15 @@ import java.util.Collection;
 public class CustomerController {
 
     private CustomerService customerService;
-    private CustomerRepository customerRepository;
 
     @Autowired
-    private CustomerController(CustomerService customerService, CustomerRepository customerRepository) {
+    private CustomerController(CustomerService customerService) {
         this.customerService = customerService;
-        this.customerRepository = customerRepository;
     }
 
     @GetMapping("/")
     public Collection<Customer> customers() {
-        return customerRepository.findAll();
+        return customerService.getAllCustomers();
     }
 
     @GetMapping("/{id}")
