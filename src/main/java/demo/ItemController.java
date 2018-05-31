@@ -12,18 +12,16 @@ import java.util.Collection;
 public class ItemController {
 
     private ItemService itemService;
-    private ItemRepository itemRepository;
 
     @Autowired
-    private ItemController(ItemService itemService, ItemRepository itemRepository) {
+    private ItemController(ItemService itemService) {
         this.itemService = itemService;
-        this.itemRepository = itemRepository;
     }
 
     @GetMapping("/")
     public Collection<Item> items() throws Exception {
 //        throw new Exception("!!");
-        return itemRepository.findAll();
+        return itemService.getAllItems();
     }
 
     @GetMapping("/{id}")

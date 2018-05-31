@@ -4,6 +4,10 @@ import demo.domain.Item;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
 @Service
 public class ItemService {
 
@@ -19,5 +23,11 @@ public class ItemService {
         if (null == item) throw new IllegalArgumentException("Item does not exist!");
 
         return itemRepository.findOne(id);
+    }
+
+    public Collection<Item> getAllItems() {
+        List<Item> items = new ArrayList<Item>();
+        itemRepository.findAll().forEach(e -> items.add(e));
+        return items;
     }
 }
