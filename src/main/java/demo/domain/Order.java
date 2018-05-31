@@ -3,13 +3,21 @@ package demo.domain;
 import demo.clients.ItemApi;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
+@Table(name = "ordertable")
 public class Order {
 
+    @Id
+    @GeneratedValue
     private long id;
+
     private long customerId;
+
+    @OneToMany(cascade = CascadeType.ALL)
     private List<OrderItem> orderItems;
 
     public Order() {

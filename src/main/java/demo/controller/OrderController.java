@@ -27,33 +27,38 @@ public class OrderController {
     }
 
     @GetMapping("/items")
+    @ResponseBody
     public Collection<Item> getItems() { return itemApi.findAll(); }
 
     @GetMapping("/customers")
+    @ResponseBody
     public Collection<Customer> customers() { return customerApi.findAll(); }
 
     @GetMapping("/")
-    public Collection<Order> orders() { return orderRepository.findAll(); }
+    @ResponseBody
+    public Collection<Order> orders() { return orderService.getAllOrders(); }
 
     @GetMapping("/{id}")
+    @ResponseBody
     public Order get(@PathVariable("id") long id) {
         return orderRepository.findOne(id);
     }
 
     @GetMapping("/{id}/price")
+    @ResponseBody
     public double getPrice(@PathVariable("id") long id) {
         return orderService.getPrice(id);
     }
 
     @PostMapping("/")
-    public String order(@RequestBody Order order) {
-        orderService.order(order);
-        return "Successfully ordered!";
+    @ResponseBody
+    public Order order(@RequestBody Order order) {
+        return orderService.order(order);
     }
 
     @DeleteMapping("/{id}")
-    public String delete(@PathVariable long id) {
+    @ResponseBody
+    public void delete(@PathVariable long id) {
         orderRepository.delete(id);
-        return "Successfully deleted!";
     }
 }
