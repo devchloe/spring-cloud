@@ -14,9 +14,3 @@ hystrix:
 management:
   security:
     enabled: false
-
-spring:
-  jpa:
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.HSQLDialect
