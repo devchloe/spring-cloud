@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import java.util.Collection;
 
 @FeignClient(name = "customer")
-public interface CustomerClient {
+public interface CustomerResource {
 
     @GetMapping("/")
     Collection<Customer> findAll();

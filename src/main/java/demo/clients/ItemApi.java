@@ -9,11 +9,11 @@ import java.util.Collection;
 @Component
 public class ItemApi {
 
-    private ItemClient itemClient;
+    private ItemResource itemClient;
     private Collection<Item> itemsCache = null;
 
     @Autowired
-    public ItemApi(ItemClient itemClient) {
+    public ItemApi(ItemResource itemClient) {
         this.itemClient = itemClient;
     }
 

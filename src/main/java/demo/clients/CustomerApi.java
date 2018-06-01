@@ -8,10 +8,10 @@ import java.util.Collection;
 @Component
 public class CustomerApi {
 
-    private CustomerClient customerClient;
+    private CustomerResource customerClient;
 
     @Autowired
-    private CustomerApi(CustomerClient customerClient) {
+    private CustomerApi(CustomerResource customerClient) {
         this.customerClient = customerClient;
     }
 

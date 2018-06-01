@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import java.util.List;
 
 @FeignClient(name = "item")
-public interface ItemClient {
+public interface ItemResource {
 
     @GetMapping("/")
     List<Item> findAll();
