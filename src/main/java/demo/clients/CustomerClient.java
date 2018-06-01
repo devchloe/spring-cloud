@@ -6,12 +6,12 @@ import org.springframework.stereotype.Component;
 import java.util.Collection;
 
 @Component
-public class CustomerApi {
+public class CustomerClient {
 
     private CustomerResource customerClient;
 
     @Autowired
-    private CustomerApi(CustomerResource customerClient) {
+    private CustomerClient(CustomerResource customerClient) {
         this.customerClient = customerClient;
     }
 

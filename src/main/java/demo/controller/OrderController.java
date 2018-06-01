@@ -14,11 +14,11 @@ public class OrderController {
 
     private OrderService orderService;
     private OrderRepository orderRepository;
-    private CustomerApi customerApi;
-    private ItemApi itemApi;
+    private CustomerClient customerApi;
+    private ItemClient itemApi;
 
     @Autowired
-    private OrderController(OrderService orderService, OrderRepository orderRepository, CustomerApi customerApi, ItemApi itemApi) {
+    private OrderController(OrderService orderService, OrderRepository orderRepository, CustomerClient customerApi, ItemClient itemApi) {
         super();
         this.orderService = orderService;
         this.orderRepository = orderRepository;

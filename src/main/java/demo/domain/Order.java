@@ -1,6 +1,6 @@
 package demo.domain;
 
-import demo.clients.ItemApi;
+import demo.clients.ItemClient;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
 import javax.persistence.*;
@@ -61,7 +61,7 @@ public class Order {
         return orderItems.size();
     }
 
-    public double totalPrice(ItemApi itemApi) {
+    public double totalPrice(ItemClient itemApi) {
         return orderItems.stream()
                 .map((ol) -> ol.getCount() * itemApi.price(ol.getItemId()))
                 .reduce(0.0, (d1, d2) -> d1 + d2);

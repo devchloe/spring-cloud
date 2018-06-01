@@ -1,8 +1,8 @@
 package demo.service;
 
 import demo.repository.OrderRepository;
-import demo.clients.CustomerApi;
-import demo.clients.ItemApi;
+import demo.clients.CustomerClient;
+import demo.clients.ItemClient;
 import demo.domain.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,11 +15,11 @@ import java.util.List;
 public class OrderService {
 
     private OrderRepository orderRepository;
-    private CustomerApi customerApi;
-    private ItemApi itemApi;
+    private CustomerClient customerApi;
+    private ItemClient itemApi;
 
     @Autowired
-    private OrderService(OrderRepository orderRepository, CustomerApi customerApi, ItemApi itemApi) {
+    private OrderService(OrderRepository orderRepository, CustomerClient customerApi, ItemClient itemApi) {
         super();
         this.orderRepository = orderRepository;
         this.customerApi = customerApi;

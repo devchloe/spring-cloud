@@ -7,13 +7,13 @@ import org.springframework.stereotype.Component;
 import java.util.Collection;
 
 @Component
-public class ItemApi {
+public class ItemClient {
 
     private ItemResource itemClient;
     private Collection<Item> itemsCache = null;
 
     @Autowired
-    public ItemApi(ItemResource itemClient) {
+    public ItemClient(ItemResource itemClient) {
         this.itemClient = itemClient;
     }
 
