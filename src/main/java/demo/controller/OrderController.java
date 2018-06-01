@@ -14,15 +14,15 @@ public class OrderController {
 
     private OrderService orderService;
     private OrderRepository orderRepository;
-    private CustomerClient customerApi;
+    private CustomerClient customerClient;
     private ItemClient itemApi;
 
     @Autowired
-    private OrderController(OrderService orderService, OrderRepository orderRepository, CustomerClient customerApi, ItemClient itemApi) {
+    private OrderController(OrderService orderService, OrderRepository orderRepository, CustomerClient customerClient, ItemClient itemApi) {
         super();
         this.orderService = orderService;
         this.orderRepository = orderRepository;
-        this.customerApi = customerApi;
+        this.customerClient = customerClient;
         this.itemApi = itemApi;
     }
 
@@ -32,7 +32,7 @@ public class OrderController {
 
     @GetMapping("/customers")
     @ResponseBody
-    public Collection<Customer> customers() { return customerApi.findAll(); }
+    public Collection<Customer> customers() { return customerClient.findAll(); }
 
     @GetMapping("/")
     @ResponseBody

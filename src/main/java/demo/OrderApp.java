@@ -9,6 +9,7 @@ import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
+@EnableDiscoveryClient
 @EnableFeignClients
 @EnableHystrix
 @EnableJpaRepositories

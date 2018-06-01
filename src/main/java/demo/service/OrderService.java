@@ -15,26 +15,26 @@ import java.util.List;
 public class OrderService {
 
     private OrderRepository orderRepository;
-    private CustomerClient customerApi;
-    private ItemClient itemApi;
+    private CustomerClient customerClient;
+    private ItemClient itemClient;
 
     @Autowired
-    private OrderService(OrderRepository orderRepository, CustomerClient customerApi, ItemClient itemApi) {
+    private OrderService(OrderRepository orderRepository, CustomerClient customerClient, ItemClient itemClient) {
         super();
         this.orderRepository = orderRepository;
-        this.customerApi = customerApi;
-        this.itemApi = itemApi;
+        this.customerClient = customerClient;
+        this.itemClient = itemClient;
     }
 
     public Order order(Order order) {
         if (order.getNumberOfItems() == 0) { throw new IllegalArgumentException("No items to order!"); }
-        if (!customerApi.isValidCustomerId(order.getCustomerId())) { throw new IllegalArgumentException("Customer does not exist!"); }
+        if (!customerClient.isValidCustomerId(order.getCustomerId())) { throw new IllegalArgumentException("Customer does not exist!"); }
 
         return orderRepository.save(order);
     }
 
     public double getPrice(long orderId) {
-        return orderRepository.findOne(orderId).totalPrice(itemApi);
+        return orderRepository.findOne(orderId).totalPrice(itemClient);
     }
 
     public Collection<Order> getAllOrders() {

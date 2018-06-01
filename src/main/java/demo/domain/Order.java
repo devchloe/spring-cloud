@@ -61,9 +61,9 @@ public class Order {
         return orderItems.size();
     }
 
-    public double totalPrice(ItemClient itemApi) {
+    public double totalPrice(ItemClient itemClient) {
         return orderItems.stream()
-                .map((ol) -> ol.getCount() * itemApi.price(ol.getItemId()))
+                .map((ol) -> ol.getCount() * itemClient.price(ol.getItemId()))
                 .reduce(0.0, (d1, d2) -> d1 + d2);
     }
 
