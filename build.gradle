@@ -43,3 +43,8 @@ dependencies {
 
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
+
+bootRun {
+    systemProperty 'server.port', '2222'
+    main = 'demo.ItemApp'
+}
