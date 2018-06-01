@@ -46,5 +46,5 @@ dependencies {
 
 bootRun {
     systemProperty 'server.port', '8081'
-    main = 'demo.ItemApp'
+    main = 'demo.OrderApp'
 }
