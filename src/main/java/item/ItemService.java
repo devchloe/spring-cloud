@@ -1,6 +1,6 @@
-package demo;
+package item;
 
-import demo.domain.Item;
+import item.domain.Item;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
