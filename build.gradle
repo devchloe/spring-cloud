@@ -11,7 +11,7 @@ buildscript {
         classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
         classpath "org.springframework.cloud:spring-cloud-contract-gradle-plugin:1.2.4.RELEASE"
         classpath "org.springframework.cloud:spring-cloud-contract-spec-pact:1.2.4.RELEASE"
-        classpath "au.com.dius:pact-jvm-model:2.4.18"
+        classpath 'au.com.dius:pact-jvm-model:2.4.18'
         classpath "io.spring.gradle:dependency-management-plugin:1.0.4.RELEASE"
     }
 }
@@ -64,6 +64,6 @@ contracts {
 }
 
 bootRun {
-    systemProperty "server.port", "8083"
-    main = "item.ItemApp"
+    systemProperty 'server.port', '8083'
+    main = 'item.ItemApp'
 }
