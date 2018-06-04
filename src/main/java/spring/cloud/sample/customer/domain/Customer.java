@@ -1,4 +1,4 @@
-package demo.domain;
+package spring.cloud.sample.customer.domain;
 
 import org.apache.commons.lang.builder.ToStringBuilder;
 
