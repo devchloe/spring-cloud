@@ -1,6 +1,6 @@
-package demo;
+package item;
 
-import demo.domain.Item;
+import item.domain.Item;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,13 +14,12 @@ public class ItemController {
     private ItemService itemService;
 
     @Autowired
-    private ItemController(ItemService itemService) {
+    public ItemController(ItemService itemService) {
         this.itemService = itemService;
     }
 
     @GetMapping("/")
     public Collection<Item> items() throws Exception {
-//        throw new Exception("!!");
         return itemService.getAllItems();
     }
 
