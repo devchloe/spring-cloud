@@ -1,6 +1,7 @@
 package spring.cloud.sample.controller;
 
-import demo.clients.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 import spring.cloud.sample.clients.Customer;
 import spring.cloud.sample.clients.CustomerClient;
 import spring.cloud.sample.clients.Item;
@@ -8,8 +9,6 @@ import spring.cloud.sample.clients.ItemClient;
 import spring.cloud.sample.domain.Order;
 import spring.cloud.sample.repository.OrderRepository;
 import spring.cloud.sample.service.OrderService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
 
