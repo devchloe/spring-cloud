@@ -1,4 +1,4 @@
-package spring.cloud.sample.order.domain;
+package spring.cloud.sample.domain;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 

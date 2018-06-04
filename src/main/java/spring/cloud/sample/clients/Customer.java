@@ -1,4 +1,4 @@
-package spring.cloud.sample.order.clients;
+package spring.cloud.sample.clients;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.ToStringBuilder;

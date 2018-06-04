@@ -1,4 +1,4 @@
-package spring.cloud.sample.order.clients;
+package spring.cloud.sample.clients;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;

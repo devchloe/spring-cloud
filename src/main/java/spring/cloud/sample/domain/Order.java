@@ -1,6 +1,6 @@
-package spring.cloud.sample.order.domain;
+package spring.cloud.sample.domain;
 
-import spring.cloud.sample.order.clients.ItemClient;
+import spring.cloud.sample.clients.ItemClient;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
 import javax.persistence.*;

@@ -1,4 +1,4 @@
-package spring.cloud.sample.order.clients;
+package spring.cloud.sample.clients;
 
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
