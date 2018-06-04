@@ -16,3 +16,7 @@ hystrix:
 management:
   security:
     enabled: false
+
+stubrunner:
+  idsToServiceIds:
+    item-feign-hystrix: itemservice

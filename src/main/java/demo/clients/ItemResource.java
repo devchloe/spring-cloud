@@ -6,16 +6,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
-@FeignClient(name = "item")
+@FeignClient(name = "itemservice")
 public interface ItemResource {
 
-    @GetMapping("/")
+    @GetMapping(value = "/", consumes = "application/json;charset=UTF-8")
     List<Item> findAll();
 
     @GetMapping("/{itemId}")
     Item getOne(@PathVariable("itemId") long itemId);
-
-
-
-
 }

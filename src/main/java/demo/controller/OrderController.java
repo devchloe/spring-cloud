@@ -17,6 +17,9 @@ public class OrderController {
     private CustomerClient customerClient;
     private ItemClient itemApi;
 
+    public OrderController() {
+
+    }
     @Autowired
     private OrderController(OrderService orderService, OrderRepository orderRepository, CustomerClient customerClient, ItemClient itemApi) {
         super();
