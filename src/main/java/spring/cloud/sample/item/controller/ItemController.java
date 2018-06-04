@@ -1,10 +1,11 @@
-package item;
+package spring.cloud.sample.item.controller;
 
-import item.domain.Item;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
+import spring.cloud.sample.item.domain.Item;
+import spring.cloud.sample.item.service.ItemService;
 
 import java.util.Collection;
 

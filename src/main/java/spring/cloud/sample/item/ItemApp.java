@@ -1,9 +1,10 @@
-package item;
+package spring.cloud.sample.item;
 
-import item.domain.Item;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import spring.cloud.sample.item.domain.Item;
+import spring.cloud.sample.item.repository.ItemRepository;
 
 import javax.annotation.PostConstruct;
 
@@ -19,7 +20,7 @@ public class ItemApp {
 
     @PostConstruct
     public void generateInitialData() {
-        itemRepository.save(new Item("Banana2", 550.0));
+        itemRepository.save(new Item("Banana", 550.0));
         itemRepository.save(new Item("Apple", 700.0));
         itemRepository.save(new Item("Strawberry", 4000.0));
         itemRepository.save(new Item("Peach", 5000.0));
