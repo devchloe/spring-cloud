@@ -1,6 +1,6 @@
-package demo;
+package item;
 
-import demo.domain.Item;
+import item.domain.Item;
 import org.springframework.data.repository.CrudRepository;
 
 public interface ItemRepository extends CrudRepository<Item, Long> {
