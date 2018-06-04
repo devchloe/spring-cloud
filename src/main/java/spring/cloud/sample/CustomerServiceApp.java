@@ -9,12 +9,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import javax.annotation.PostConstruct;
 
 @SpringBootApplication
-public class CustomerApp {
+public class CustomerServiceApp {
 
     private CustomerRepository customerRepository;
 
     @Autowired
-    public CustomerApp(CustomerRepository customerRepository) {
+    public CustomerServiceApp(CustomerRepository customerRepository) {
         this.customerRepository = customerRepository;
     }
 
@@ -28,6 +28,6 @@ public class CustomerApp {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(CustomerApp.class, args);
+        SpringApplication.run(CustomerServiceApp.class, args);
     }
 }
