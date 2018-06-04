@@ -1,7 +1,7 @@
-package spring.cloud.sample.item.repository;
+package spring.cloud.sample.repository;
 
 import org.springframework.data.repository.CrudRepository;
-import spring.cloud.sample.item.domain.Item;
+import spring.cloud.sample.domain.Item;
 
 public interface ItemRepository extends CrudRepository<Item, Long> {
 

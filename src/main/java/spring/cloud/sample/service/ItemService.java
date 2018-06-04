@@ -1,9 +1,9 @@
-package spring.cloud.sample.item.service;
+package spring.cloud.sample.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import spring.cloud.sample.item.domain.Item;
-import spring.cloud.sample.item.repository.ItemRepository;
+import spring.cloud.sample.domain.Item;
+import spring.cloud.sample.repository.ItemRepository;
 
 import java.util.ArrayList;
 import java.util.Collection;

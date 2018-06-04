@@ -1,4 +1,4 @@
-package item;
+package spring.cloud.sample.api.provider.itemservice;
 
 import io.restassured.module.mockmvc.RestAssuredMockMvc;
 import org.junit.Before;
@@ -9,9 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.context.WebApplicationContext;
-import spring.cloud.sample.item.ItemApp;
-import spring.cloud.sample.item.domain.Item;
-import spring.cloud.sample.item.service.ItemService;
+import spring.cloud.sample.ItemApp;
+import spring.cloud.sample.domain.Item;
+import spring.cloud.sample.service.ItemService;
 
 import java.util.ArrayList;
 import java.util.List;

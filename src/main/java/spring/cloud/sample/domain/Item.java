@@ -1,4 +1,4 @@
-package spring.cloud.sample.item.domain;
+package spring.cloud.sample.domain;
 
 import org.apache.commons.lang.builder.ToStringBuilder;
 
