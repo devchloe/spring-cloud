@@ -39,10 +39,11 @@ dependencies {
 
     compile 'org.springframework.boot:spring-boot-starter-actuator'
 
+    testCompile 'org.springframework.cloud:spring-cloud-starter-contract-verifier'
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
 
 bootRun {
     systemProperty 'server.port', '8083'
-    main = 'demo.ItemApp'
+    main = 'item.ItemApp'
 }
