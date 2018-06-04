@@ -1,9 +1,9 @@
-package demo.service;
+package spring.cloud.sample.order.service;
 
-import demo.repository.OrderRepository;
-import demo.clients.CustomerClient;
-import demo.clients.ItemClient;
-import demo.domain.Order;
+import spring.cloud.sample.order.clients.CustomerClient;
+import spring.cloud.sample.order.clients.ItemClient;
+import spring.cloud.sample.order.domain.Order;
+import spring.cloud.sample.order.repository.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

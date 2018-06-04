@@ -1,4 +1,4 @@
-package demo.clients;
+package spring.cloud.sample.order.clients;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

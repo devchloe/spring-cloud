@@ -1,9 +1,13 @@
-package demo.controller;
+package spring.cloud.sample.order.controller;
 
 import demo.clients.*;
-import demo.domain.Order;
-import demo.repository.OrderRepository;
-import demo.service.OrderService;
+import spring.cloud.sample.order.clients.Customer;
+import spring.cloud.sample.order.clients.CustomerClient;
+import spring.cloud.sample.order.clients.Item;
+import spring.cloud.sample.order.clients.ItemClient;
+import spring.cloud.sample.order.domain.Order;
+import spring.cloud.sample.order.repository.OrderRepository;
+import spring.cloud.sample.order.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

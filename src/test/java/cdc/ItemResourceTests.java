@@ -1,8 +1,8 @@
 package cdc;
 
-import demo.OrderApp;
-import demo.clients.Item;
-import demo.clients.ItemResource;
+import spring.cloud.sample.order.OrderApp;
+import spring.cloud.sample.order.clients.Item;
+import spring.cloud.sample.order.clients.ItemResource;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
