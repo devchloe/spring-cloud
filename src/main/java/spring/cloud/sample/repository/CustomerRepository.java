@@ -1,6 +1,6 @@
-package spring.cloud.sample.customer.repository;
+package spring.cloud.sample.repository;
 
-import spring.cloud.sample.customer.domain.Customer;
+import spring.cloud.sample.domain.Customer;
 import org.springframework.data.repository.CrudRepository;
 
 public interface CustomerRepository extends CrudRepository<Customer, Long> {

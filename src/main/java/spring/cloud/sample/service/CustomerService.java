@@ -1,7 +1,7 @@
-package spring.cloud.sample.customer.service;
+package spring.cloud.sample.service;
 
-import spring.cloud.sample.customer.domain.Customer;
-import spring.cloud.sample.customer.repository.CustomerRepository;
+import spring.cloud.sample.domain.Customer;
+import spring.cloud.sample.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
