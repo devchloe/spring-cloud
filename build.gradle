@@ -57,7 +57,8 @@ contracts {
         baseClassMapping(".*itemservice.*", "item.ItemServiceBase")
     }
 }
+
 bootRun {
-    systemProperty "server.port", "9083"
-    main = "demo.ItemApp"
+    systemProperty 'server.port', '8083'
+    main = 'item.ItemApp'
 }
