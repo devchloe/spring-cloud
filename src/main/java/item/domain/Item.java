@@ -1,4 +1,4 @@
-package demo.domain;
+package item.domain;
 
 import org.apache.commons.lang.builder.ToStringBuilder;
 
