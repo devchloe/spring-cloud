@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.context.WebApplicationContext;
-import spring.cloud.sample.ItemApp;
+import spring.cloud.sample.ItemServiceApp;
 import spring.cloud.sample.domain.Item;
 import spring.cloud.sample.service.ItemService;
 
@@ -20,7 +20,7 @@ import static org.mockito.Mockito.when;
 
 @Ignore
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = ItemApp.class)
+@SpringBootTest(classes = ItemServiceApp.class)
 public class ItemServiceBase {
 
     @Autowired

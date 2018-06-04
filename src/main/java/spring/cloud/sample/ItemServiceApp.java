@@ -9,12 +9,12 @@ import spring.cloud.sample.repository.ItemRepository;
 import javax.annotation.PostConstruct;
 
 @SpringBootApplication
-public class ItemApp {
+public class ItemServiceApp {
 
     private final ItemRepository itemRepository;
 
     @Autowired
-    public ItemApp(ItemRepository itemRepository) {
+    public ItemServiceApp(ItemRepository itemRepository) {
         this.itemRepository = itemRepository;
     }
 
@@ -28,6 +28,6 @@ public class ItemApp {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(ItemApp.class, args);
+        SpringApplication.run(ItemServiceApp.class, args);
     }
 }
