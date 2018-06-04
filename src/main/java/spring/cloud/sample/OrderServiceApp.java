@@ -12,9 +12,9 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableFeignClients
 @EnableHystrix
 @EnableJpaRepositories
-public class OrderApp {
+public class OrderServiceApp {
 
     public static void main(String[] args) {
-        SpringApplication.run(OrderApp.class, args);
+        SpringApplication.run(OrderServiceApp.class, args);
     }
 }
